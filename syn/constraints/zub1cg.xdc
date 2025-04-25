@@ -1,6 +1,6 @@
 #
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # set_property PACKAGE_PIN G7 [get_ports {HD_CLICK_CS0_1V8}]
 # set_property PACKAGE_PIN G5 [get_ports {HD_CLICK_CS1_AN_1V8}]
 # set_property PACKAGE_PIN E8 [get_ports {HD_CLICK_INT_1V8}]
@@ -77,7 +77,7 @@
 # set_property PACKAGE_PIN N3 [get_ports {HP_SE[01]}]
 # set_property PACKAGE_PIN H3 [get_ports {HP_SE[02]}]
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # set_property IOSTANDARD LVCMOS18 [get_ports {HD_CLICK_CS0_1V8}]
 # set_property IOSTANDARD LVCMOS18 [get_ports {HD_CLICK_CS1_AN_1V8}]
 # set_property IOSTANDARD LVCMOS18 [get_ports {HD_CLICK_INT_1V8}]
@@ -102,17 +102,18 @@
 # set_property IOSTANDARD LVCMOS12 [get_ports {HP_DP[*]}]
 # set_property IOSTANDARD LVCMOS12 [get_ports {HP_SE[*]}]
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-set_property PACKAGE_PIN B5 [get_ports {HD_GPIO_RGB1_B}]
-set_property PACKAGE_PIN B6 [get_ports {HD_GPIO_RGB1_G}]
-set_property PACKAGE_PIN A7 [get_ports {HD_GPIO_RGB1_R}]
-set_property PACKAGE_PIN F4 [get_ports {HP_GPIO_RGB2_B}]
-set_property PACKAGE_PIN A2 [get_ports {HP_GPIO_RGB2_G}]
-set_property PACKAGE_PIN B4 [get_ports {HP_GPIO_RGB2_R}]
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+set_property PACKAGE_PIN B5 [get_ports HD_GPIO_RGB1_B]
+set_property PACKAGE_PIN B6 [get_ports HD_GPIO_RGB1_G]
+set_property PACKAGE_PIN A7 [get_ports HD_GPIO_RGB1_R]
+set_property PACKAGE_PIN F4 [get_ports HP_GPIO_RGB2_B]
+set_property PACKAGE_PIN A2 [get_ports HP_GPIO_RGB2_G]
+set_property PACKAGE_PIN B4 [get_ports HP_GPIO_RGB2_R]
 
-set_property IOSTANDARD LVCMOS18 [get_ports {HD_GPIO_RGB1_B}]
-set_property IOSTANDARD LVCMOS18 [get_ports {HD_GPIO_RGB1_G}]
-set_property IOSTANDARD LVCMOS18 [get_ports {HD_GPIO_RGB1_R}]
-set_property IOSTANDARD LVCMOS12 [get_ports {HP_GPIO_RGB2_B}]
-set_property IOSTANDARD LVCMOS12 [get_ports {HP_GPIO_RGB2_G}]
-set_property IOSTANDARD LVCMOS12 [get_ports {HP_GPIO_RGB2_R}]
+set_property IOSTANDARD LVCMOS18 [get_ports HD_GPIO_RGB1_B]
+set_property IOSTANDARD LVCMOS18 [get_ports HD_GPIO_RGB1_G]
+set_property IOSTANDARD LVCMOS18 [get_ports HD_GPIO_RGB1_R]
+set_property IOSTANDARD LVCMOS12 [get_ports HP_GPIO_RGB2_B]
+set_property IOSTANDARD LVCMOS12 [get_ports HP_GPIO_RGB2_G]
+set_property IOSTANDARD LVCMOS12 [get_ports HP_GPIO_RGB2_R]
+

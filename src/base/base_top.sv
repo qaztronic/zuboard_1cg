@@ -9,11 +9,11 @@ module base_top
 , output HP_GPIO_RGB2_G
 , output HP_GPIO_RGB2_R
 );
-  // // --------------------------------------------------------------------------------
-  // localparam A = 16;
-  // localparam N = 4;
+  // --------------------------------------------------------------------------------
+  localparam A = 16;
+  localparam N = 4;
 
-  // axi4_if #(A,N) axi4_cpu(.*);
+  axi4_if #(A,N) axi4_cpu(.*);
 
   // --------------------------------------------------------------------------------
   wire aclk   ;
@@ -21,19 +21,19 @@ module base_top
 
   base_cpu_w cpu_i(.*);
 
-  // // --------------------------------------------------------------------------------
-  // axi4_lite_default_slave #(A, N)
-    // axi4_lite_default_slave(.axi4_s(axi4_cpu), .*);
+  // --------------------------------------------------------------------------------
+  axi4_lite_default_slave #(A, N)
+    axi4_lite_default_slave(.axi4_s(axi4_cpu), .*);
 
   // --------------------------------------------------------------------------------
-  reg [23:0] counter;
+  reg [25:0] counter;
 
   always_ff @(posedge aclk)
     counter <= counter + 1;
 
   // --------------------------------------------------------------------------------
   assign HD_GPIO_RGB1_B = 0;
-  assign HD_GPIO_RGB1_G = counter[23];
+  assign HD_GPIO_RGB1_G = counter[25];
   assign HD_GPIO_RGB1_R = 0;
   assign HP_GPIO_RGB2_B = 0;
   assign HP_GPIO_RGB2_G = 0;

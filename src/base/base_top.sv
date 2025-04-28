@@ -10,8 +10,10 @@ module base_top
 , output HP_GPIO_RGB2_R
 );
   // --------------------------------------------------------------------------------
-  localparam A = 16;
-  localparam N = 4;
+  localparam A  = 16;
+  localparam N  =  4;
+  localparam I  =  1;
+  localparam MW =  4;
 
   axi4_if #(A,N) axi4_cpu(.*);
 
@@ -28,14 +30,18 @@ module base_top
    axi4_lite_fanout_i (.axi4_s(axi4_cpu), .*);
 
   // --------------------------------------------------------------------------------
-  axi4_lite_register_if #(N, 3) r_if();
+  axi4_lite_register_if #(N, MW) r_if();
 
-  axi4_lite_register_file #(A, N)
+  axi4_lite_register_file #(A, N, I, MW)
     axi4_lite_register_file_i(.axi4_s(axi4_m[0]), .*);
+
+  // // --------------------------------------------------------------------------------
+  // axi4_lite_default_slave #(A, N)
+    // axi4_lite_default_slave_0(.axi4_s(axi4_m[0]), .*);
 
   // --------------------------------------------------------------------------------
   axi4_lite_default_slave #(A, N)
-    axi4_lite_default_slave(.axi4_s(axi4_m[1]), .*);
+    axi4_lite_default_slave_1(.axi4_s(axi4_m[1]), .*);
 
   // --------------------------------------------------------------------------------
   reg [25:0] counter;
